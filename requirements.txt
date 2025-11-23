@@ -1,0 +1,48 @@
+# DNS Spoof MITM - Requirements
+# Educational Penetration Testing Tool
+# Python 3.8+
+# Author: Melissa Hall (@melissachall)
+# Date: 2025-11-23
+
+# =====================================================
+# CORE DEPENDENCIES
+# =====================================================
+
+# Packet manipulation and network analysis
+scapy>=2.5.0
+
+# Linux kernel packet queue interface
+NetfilterQueue>=1.0.0
+
+# =====================================================
+# SYSTEM DEPENDENCIES (install via apt)
+# =====================================================
+# Run these commands before pip install:
+#
+# sudo apt update
+# sudo apt install -y libnetfilter-queue-dev
+# sudo apt install -y python3-netfilterqueue
+# sudo apt install -y iptables
+# sudo apt install -y dsniff (provides arpspoof)
+# sudo apt install -y tcpdump (optional, for debugging)
+# sudo apt install -y net-tools (optional, for ifconfig)
+#
+# =====================================================
+
+# =====================================================
+# NOTES
+# =====================================================
+# 
+# Installation order matters:
+# 1. Install system dependencies first (apt)
+# 2. Then install Python packages (pip)
+#
+# If NetfilterQueue fails to install:
+#   pip3 install --upgrade pip
+#   sudo apt install python3-dev build-essential
+#   pip3 install NetfilterQueue
+#
+# For Ubuntu/Debian systems, you may need:
+#   sudo apt install python3-scapy
+#
+# =====================================================
